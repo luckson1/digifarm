@@ -8,7 +8,7 @@ export const siteConfig = {
       twitter: "https://twitter.com/safaricom_care",
       facebook: "https://www.facebook.com/SafaricomPLC",
       site: "https://jackbatian.vercel.app",
-      github: ""
+      github: "https://github.com/luckson1/digifarm"
     },
   }
   
