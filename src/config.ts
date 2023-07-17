@@ -1,6 +1,6 @@
 export const siteConfig = {
     name: "DigiFarm",
-    url: "https://digifarm.vercel.app/",
+    url: "https://digifarm.vercel.app",
     ogImage: "/logo.png",
     description:
       "Buy and sell Kenya's best fresh produce",
