@@ -1,4 +1,5 @@
 "use client"
+
 import { Button } from "@/components/ui/button"
 import {
   Card,
@@ -19,11 +20,14 @@ import { useRouter } from "next/navigation"
 import { Overview } from "./overview"
 import { RecentPurchases } from "./recent"
 import { CalendarDateRangePicker } from "./range-picker"
+import { useEffect } from "react"
 
 export default function DashboardPage() {
     const router=useRouter()
     const [auth, setForm]=useStore(store=> [store.auth, store.setLoginForm])
+  useEffect(()=> {
     if(!auth){setForm(), router.replace("/auth")}
+  }, [auth, router, setForm])
     return (
       <>
   
