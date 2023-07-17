@@ -19,11 +19,21 @@ export const Hero= () => {
             <path d="M50 0H100L50 100H0L50 0Z" />
           </svg>
           <Image
-            className="object-cover w-full h-56 rounded shadow-lg lg:rounded-none lg:shadow-none md:h-96 lg:h-full"
+            className="object-cover w-full h-56 rounded shadow-lg lg:rounded-none lg:shadow-none md:h-96 lg:h-full hidden lg:flex"
             src="https://images.unsplash.com/photo-1557844352-761f2565b576?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2940&q=80"
             alt="food"
             width={600}
             height={800}
+            quality={50}
+            priority
+          />
+            <Image
+            className="object-cover w-full h-56 rounded shadow-lg lg:rounded-none lg:shadow-none md:h-96 lg:h-full lg:hidden"
+            src="https://images.unsplash.com/photo-1557844352-761f2565b576?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2940&q=80"
+            alt="food"
+            width={300}
+            height={300}
+            quality={50}
             priority
           />
         </div>
