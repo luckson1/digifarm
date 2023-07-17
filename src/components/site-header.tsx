@@ -8,11 +8,12 @@ import { MainNav } from "@/components/main-nav"
 import { MobileNav } from "@/components/mobile-nav"
 import { ModeToggle } from "@/components/mode-toggle"
 import { buttonVariants } from "@/components/ui/button"
+import { Account } from "./account-button"
 
 
 export function SiteHeader() {
   return (
-    <header className="supports-backdrop-blur:bg-background/60 sticky top-0 z-40 w-full border-b bg-background/95 backdrop-blur">
+    <header className="supports-backdrop-blur:bg-background/60 sticky top-0 z-40 w-full border-b bg-background/95 backdrop-blur bg">
       <div className="container flex h-14 items-center">
         <MainNav />
         <MobileNav />
@@ -34,11 +35,11 @@ export function SiteHeader() {
                   "w-10 px-0"
                 )}
               >
-                <Icons.cart className="h-5 w-5" />
+                <Icons.cart className="h-5 w-5 text-primary" />
                 <span className="sr-only">Cart</span>
               </div>
             </Link>
-            <Link
+            {/* <Link
               href=''
               target="_blank"
               rel="noreferrer"
@@ -51,10 +52,11 @@ export function SiteHeader() {
                   "w-10 px-0"
                 )}
               >
-                <Icons.user className="h-5 w-5" />
+                <Icons.user className="h-5 w-5 text-primary" />
                 <span className="sr-only">Account</span>
               </div>
-            </Link>
+            </Link> */}
+            <Account />
 
             <ModeToggle />
           </nav>

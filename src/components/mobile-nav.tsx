@@ -2,7 +2,6 @@
 
 import * as React from "react"
 import Link, { LinkProps } from "next/link"
-import { useRouter } from "next/navigation"
 import { ViewVerticalIcon } from "@radix-ui/react-icons"
 
 
@@ -12,6 +11,7 @@ import { Icons } from "@/components/icons"
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet"
 import { Button } from "@/components/ui/button"
 import { ScrollArea } from "@/components/ui/scroll-area"
+import { useRouter } from "next/navigation"
 
 export function MobileNav() {
   const [open, setOpen] = React.useState(false)
