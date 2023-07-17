@@ -23,7 +23,7 @@ Deal
         </Badge>
     </CardHeader>
     <CardContent className='text-base space-y-2'>
-        <Image src={product.imageUrl} alt={product.name}  width={300} height={300} priority className='w-full h-56 rounded-md'/>
+        <Image src={product.imageUrl} alt={product.name}  width={300} height={300} priority quality={30} className='w-full h-56 rounded-md'/>
         <p className='text-xl font-semibold'>{product.name}</p>
         <p className='truncate text-sm text-muted-foreground'>{product.description}</p>
        <div className='flex justify-between'>
