@@ -1,21 +1,21 @@
-"use client"
+"use client";
 
-import * as React from "react"
-import Link, { LinkProps } from "next/link"
-import { ViewVerticalIcon } from "@radix-ui/react-icons"
+import * as React from "react";
+import Link, { LinkProps } from "next/link";
+import { ViewVerticalIcon } from "@radix-ui/react-icons";
 
-
-import { siteConfig } from "@/config"
-import { cn } from "@/lib/utils"
-import { Icons } from "@/components/icons"
-import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet"
-import { Button } from "@/components/ui/button"
-import { ScrollArea } from "@/components/ui/scroll-area"
-import { useRouter } from "next/navigation"
+import { siteConfig } from "@/config";
+import { cn } from "@/lib/utils";
+import { Icons } from "@/components/icons";
+import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
+import { Button } from "@/components/ui/button";
+import { ScrollArea } from "@/components/ui/scroll-area";
+import { useRouter } from "next/navigation";
+import useStore from "@/lib/state-management";
 
 export function MobileNav() {
-  const [open, setOpen] = React.useState(false)
-
+  const [open, setOpen] = React.useState(false);
+  const auth = useStore((store) => store.auth);
   return (
     <Sheet open={open} onOpenChange={setOpen}>
       <SheetTrigger asChild>
@@ -36,16 +36,38 @@ export function MobileNav() {
           <Icons.logo className="mr-2 h-4 w-4" />
           <span className="font-bold">{siteConfig.name}</span>
         </MobileLink>
-      
+        <ScrollArea className="my-4 h-[calc(100vh-8rem)] pb-10 pl-6">
+          <div className="flex flex-col space-y-3">
+            <MobileLink
+              href={"/store"}
+              className={cn("flex items-center px-4", "font-bold text-primary")}
+              onOpenChange={setOpen}
+            >
+              Shop
+            </MobileLink>
+            {auth && (
+              <MobileLink
+                onOpenChange={setOpen}
+                href={"/dashboard"}
+                className={cn(
+                  "flex items-center px-4",
+                  "font-bold text-primary"
+                )}
+              >
+                Dashboard
+              </MobileLink>
+            )}
+          </div>
+        </ScrollArea>
       </SheetContent>
     </Sheet>
-  )
+  );
 }
 
 interface MobileLinkProps extends LinkProps {
-  onOpenChange?: (open: boolean) => void
-  children: React.ReactNode
-  className?: string
+  onOpenChange?: (open: boolean) => void;
+  children: React.ReactNode;
+  className?: string;
 }
 
 function MobileLink({
@@ -55,18 +77,18 @@ function MobileLink({
   children,
   ...props
 }: MobileLinkProps) {
-  const router = useRouter()
+  const router = useRouter();
   return (
     <Link
       href={href}
       onClick={() => {
-        router.push(href.toString())
-        onOpenChange?.(false)
+        router.push(href.toString());
+        onOpenChange?.(false);
       }}
       className={cn(className)}
       {...props}
     >
       {children}
     </Link>
-  )
+  );
 }
