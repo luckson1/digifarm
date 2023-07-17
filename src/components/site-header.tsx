@@ -1,15 +1,14 @@
-import Link from "next/link"
+import Link from "next/link";
 
-import { siteConfig } from "@/config"
-import { cn } from "@/lib/utils"
-import { CommandMenu } from "@/components/command-menu"
-import { Icons } from "@/components/icons"
-import { MainNav } from "@/components/main-nav"
-import { MobileNav } from "@/components/mobile-nav"
-import { ModeToggle } from "@/components/mode-toggle"
-import { buttonVariants } from "@/components/ui/button"
-import { Account } from "./account-button"
-
+import { siteConfig } from "@/config";
+import { cn } from "@/lib/utils";
+import { CommandMenu } from "@/components/command-menu";
+import { Icons } from "@/components/icons";
+import { MainNav } from "@/components/main-nav";
+import { MobileNav } from "@/components/mobile-nav";
+import { ModeToggle } from "@/components/mode-toggle";
+import { buttonVariants } from "@/components/ui/button";
+import { Account } from "./account-button";
 
 export function SiteHeader() {
   return (
@@ -22,11 +21,7 @@ export function SiteHeader() {
             <CommandMenu />
           </div>
           <nav className="flex items-center">
-            <Link
-              href=''
-              target="_blank"
-              rel="noreferrer"
-            >
+            <Link href="/">
               <div
                 className={cn(
                   buttonVariants({
@@ -39,23 +34,6 @@ export function SiteHeader() {
                 <span className="sr-only">Cart</span>
               </div>
             </Link>
-            {/* <Link
-              href=''
-              target="_blank"
-              rel="noreferrer"
-            >
-              <div
-                className={cn(
-                  buttonVariants({
-                    variant: "ghost",
-                  }),
-                  "w-10 px-0"
-                )}
-              >
-                <Icons.user className="h-5 w-5 text-primary" />
-                <span className="sr-only">Account</span>
-              </div>
-            </Link> */}
             <Account />
 
             <ModeToggle />
@@ -63,5 +41,5 @@ export function SiteHeader() {
         </div>
       </div>
     </header>
-  )
+  );
 }
