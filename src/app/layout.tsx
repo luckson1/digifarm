@@ -1,15 +1,15 @@
-import "@/app/globals.css"
-import { Metadata } from "next"
+import "@/app/globals.css";
+import { Metadata } from "next";
 
-import { siteConfig } from "@/config"
-import { fontSans } from "@/lib/fonts"
-import { cn } from "@/lib/utils"
-import { ThemeProvider } from "@/components/providers"
-import { SiteFooter } from "@/components/site-footer"
-import { SiteHeader } from "@/components/site-header"
-import { TailwindIndicator } from "@/components/tailwind-indicator"
-import { Toaster as DefaultToaster } from "@/components/ui/toaster"
-import { Toaster as NewYorkToaster } from "@/components/ui/toaster"
+import { siteConfig } from "@/config";
+import { fontSans } from "@/lib/fonts";
+import { cn } from "@/lib/utils";
+import { ThemeProvider } from "@/components/providers";
+import { SiteFooter } from "@/components/site-footer";
+import { SiteHeader } from "@/components/site-header";
+import { TailwindIndicator } from "@/components/tailwind-indicator";
+import { Toaster as DefaultToaster } from "@/components/ui/toaster";
+import { Toaster as NewYorkToaster } from "@/components/ui/toaster";
 
 export const metadata: Metadata = {
   title: {
@@ -17,13 +17,7 @@ export const metadata: Metadata = {
     template: `%s - ${siteConfig.name}`,
   },
   description: siteConfig.description,
-  keywords: [
-    "Fresh Poduce",
-    "Vegetables",
-    "Fruits",
-    "Cereals",
-    "Potatoes",
-  ],
+  keywords: ["Fresh Poduce", "Vegetables", "Fruits", "Cereals", "Potatoes"],
   authors: [
     {
       name: "Jack",
@@ -64,14 +58,13 @@ export const metadata: Metadata = {
     apple: "/apple-touch-icon.png",
   },
   manifest: `${siteConfig.url}/site.webmanifest`,
-}
+};
 
 interface RootLayoutProps {
-  children: React.ReactNode
+  children: React.ReactNode;
 }
 
 export default function RootLayout({ children }: RootLayoutProps) {
-
   return (
     <>
       <html lang="en" suppressHydrationWarning>
@@ -95,5 +88,5 @@ export default function RootLayout({ children }: RootLayoutProps) {
         </body>
       </html>
     </>
-  )
+  );
 }

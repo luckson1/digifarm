@@ -1,27 +1,27 @@
-"use client"
+"use client";
 
-import { Bar, BarChart, ResponsiveContainer, XAxis, YAxis } from "recharts"
+import { Bar, BarChart, ResponsiveContainer, XAxis, YAxis } from "recharts";
 
 const data = [
   {
     month: "Jan",
-   purchases: Math.floor(Math.random() * 50000) + 1000,
+    purchases: Math.floor(Math.random() * 50000) + 1000,
   },
   {
     month: "Feb",
-   purchases: Math.floor(Math.random() * 50000) + 1000,
+    purchases: Math.floor(Math.random() * 50000) + 1000,
   },
   {
     month: "Mar",
-   purchases: Math.floor(Math.random() * 50000) + 1000,
+    purchases: Math.floor(Math.random() * 50000) + 1000,
   },
   {
     month: "Apr",
-   purchases: Math.floor(Math.random() * 50000) + 1000,
+    purchases: Math.floor(Math.random() * 50000) + 1000,
   },
   {
     month: "May",
-   purchases: Math.floor(Math.random() * 50000) + 1000,
+    purchases: Math.floor(Math.random() * 50000) + 1000,
   },
   {
     month: "Jun",
@@ -45,13 +45,13 @@ const data = [
   },
   {
     month: "Nov",
-   purchases: Math.floor(Math.random() * 50000) + 1000,
+    purchases: Math.floor(Math.random() * 50000) + 1000,
   },
   {
     month: "Dec",
-   purchases: Math.floor(Math.random() * 50000) + 1000,
+    purchases: Math.floor(Math.random() * 50000) + 1000,
   },
-]
+];
 
 export function Overview() {
   return (
@@ -71,8 +71,8 @@ export function Overview() {
           axisLine={false}
           tickFormatter={(value) => `KES  ${value}`}
         />
-        <Bar dataKey="purchases" fill='#29a34e' radius={[4, 4, 0, 0]} />
+        <Bar dataKey="purchases" fill="#29a34e" radius={[4, 4, 0, 0]} />
       </BarChart>
     </ResponsiveContainer>
-  )
+  );
 }
