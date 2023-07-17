@@ -12,8 +12,11 @@ export  function CollectionCard({collection}: {collection: {name: string, src: s
     className="max-w-xs relative rounded-lg overflow-hidden hover:opacity-75 xl:w-auto w-full"
   >
     <span aria-hidden="true" className="">
-      <div className="w-full h-fit object-center object-cover">
-        <Image src={collection.src} alt={collection.name} width={500} height={600}/>
+      <div className="w-full h-fit object-center object-cover sm:hidden">
+        <Image src={collection.src} alt={collection.name} width={200} height={200} />
+      </div>
+      <div className="w-full h-fit object-center object-cover hidden sm:flex">
+        <Image src={collection.src} alt={collection.name} width={500} height={500} />
       </div>
     </span>
     <span
