@@ -1,5 +1,7 @@
-This is an online fresh food market place. 
-For a user to buy or sell on the platform, they firt have to sign up.
+This is an online fresh food marketplace. 
+To buy or sell on the platform, a user must first sign up.
+
+
 They will then be able to make a purchase and access the dashboard. 
 
 ## Getting Started
