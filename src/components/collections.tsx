@@ -13,10 +13,10 @@ export  function CollectionCard({collection}: {collection: {name: string, src: s
   >
     <span aria-hidden="true" className="">
       <div className="w-full h-fit object-center object-cover sm:hidden">
-        <Image src={collection.src} alt={collection.name} width={200} height={200} quality={30} priority/>
+        <Image src={collection.src} alt={collection.name} width={200} height={200} quality={30} priority loading='lazy'/>
       </div>
       <div className="w-full h-fit object-center object-cover hidden sm:flex">
-        <Image src={collection.src} alt={collection.name} width={500} height={500} quality={30} priority/>
+        <Image src={collection.src} alt={collection.name} width={500} height={500} quality={30} priority loading='lazy'/>
       </div>
     </span>
     <span
