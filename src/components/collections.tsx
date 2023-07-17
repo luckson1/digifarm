@@ -13,7 +13,7 @@ export  function CollectionCard({collection}: {collection: {name: string, src: s
   >
     <span aria-hidden="true" className="">
       <div className="w-full h-fit object-center object-cover">
-        <Image src={collection.src} alt={collection.name} width={500} height={700} priority/>
+        <Image src={collection.src} alt={collection.name} width={500} height={600}/>
       </div>
     </span>
     <span
