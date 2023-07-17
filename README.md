@@ -1,8 +1,16 @@
 This is an online fresh food marketplace. 
 To buy or sell on the platform, a user must first sign up.
 
+You can view the hosted web app here: https://digifarm.vercel.app/
+
 ![Onboarding form](form.png)
+
+
+
 They will then be able to make a purchase and access the dashboard. 
+
+
+
 ![Dashboard](dashboard.png)
 ## Getting Started
 
